@@ -14,7 +14,7 @@ public class GuitarTest {
     @Before
     public void before() {
         cost = new Cost(250.00, 300.00);
-        guitar = new Guitar("Alder", "Black", InstrumentType.STRING, "Fender", "Telecaster", cost);
+        guitar = new Guitar("Alder", "Black", InstrumentType.STRING, "Fender", "Telecaster", cost, 6, "Single coil");
     }
 
     @Test
@@ -45,5 +45,20 @@ public class GuitarTest {
     @Test
     public void hasBuyingPrice() {
         assertEquals(250.00, guitar.getPricing().getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(300.00, guitar.getPricing().getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasNoOfStrings() {
+        assertEquals(6, guitar.getNoOfStrings());
+    }
+
+    @Test
+    public void hasPickupType() {
+        assertEquals("Single coil", guitar.getPickupType());
     }
 }
