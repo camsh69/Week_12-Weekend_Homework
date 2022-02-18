@@ -26,4 +26,14 @@ public class GuitarTest {
     public void hasColour() {
         assertEquals("Black", guitar.getColour());
     }
+
+    @Test
+    public void hasInstrumentType() {
+        assertEquals(InstrumentType.STRING, guitar.getType());
+    }
+
+    @Test
+    public void hasManufacturer() {
+        assertEquals("Fender", guitar.getManufacturer());
+    }
 }
