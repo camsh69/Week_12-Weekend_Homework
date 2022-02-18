@@ -2,7 +2,7 @@ package instruments;
 
 import shop.Cost;
 
-public class Keyboard extends Instrument {
+public class Keyboard extends Instrument implements IPlay{
 
     private boolean sequencer;
     private String output;
@@ -19,6 +19,11 @@ public class Keyboard extends Instrument {
 
     public String getOutput() {
         return output;
+    }
+
+    @Override
+    public String play() {
+        return "dundundundah!";
     }
 }
 

@@ -27,4 +27,10 @@ public class KeyboardTest {
     public void hasOutPut() {
         assertEquals("Midi", keyboard.getOutput());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("dundundundah!", keyboard.play());
+    }
 }
+
