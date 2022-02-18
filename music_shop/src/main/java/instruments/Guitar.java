@@ -2,7 +2,7 @@ package instruments;
 
 import shop.Cost;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements IPlay {
 
     private int noOfStrings;
     private String pickupType;
@@ -19,5 +19,10 @@ public class Guitar extends Instrument {
 
     public String getPickupType() {
         return pickupType;
+    }
+
+    @Override
+    public String play() {
+        return "Twang!";
     }
 }

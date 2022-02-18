@@ -73,4 +73,9 @@ public class GuitarTest {
     public void hasPickupType() {
         assertEquals("Single coil", guitar.getPickupType());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Twang!", guitar.play());
+    }
 }
