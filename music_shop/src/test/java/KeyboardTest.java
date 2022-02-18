@@ -32,5 +32,10 @@ public class KeyboardTest {
     public void canPlay() {
         assertEquals("dundundundah!", keyboard.play());
     }
+
+    @Test
+    public void canCalculateMArkUp() {
+        assertEquals(100.00, keyboard.calculateMarkUp(), 0.0);
+    }
 }
 

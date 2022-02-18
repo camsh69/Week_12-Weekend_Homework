@@ -1,8 +1,9 @@
 package instruments;
 
 import shop.Cost;
+import shop.ISell;
 
-public class Keyboard extends Instrument implements IPlay{
+public class Keyboard extends Instrument implements IPlay, ISell {
 
     private boolean sequencer;
     private String output;
@@ -24,6 +25,11 @@ public class Keyboard extends Instrument implements IPlay{
     @Override
     public String play() {
         return "dundundundah!";
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return super.getPricing().calculateMarkUp();
     }
 }
 
