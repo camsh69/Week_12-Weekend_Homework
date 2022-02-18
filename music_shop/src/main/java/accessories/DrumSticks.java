@@ -1,8 +1,9 @@
 package accessories;
 
 import shop.Cost;
+import shop.ISell;
 
-public class DrumSticks {
+public class DrumSticks implements ISell {
 
     private int thickness;
     private Cost pricing;
@@ -18,5 +19,10 @@ public class DrumSticks {
 
     public Cost getPricing() {
         return pricing;
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return this.getPricing().getSellingPrice() - this.getPricing().getBuyingPrice();
     }
 }

@@ -42,4 +42,9 @@ public class DrumSticksTest {
         drumSticks.getPricing().setSellingPrice(12.00);
         assertEquals(12.00, drumSticks.getPricing().getSellingPrice(), 0.0);
     }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(5.00, drumSticks.calculateMarkUp(), 0.0);
+    }
 }
