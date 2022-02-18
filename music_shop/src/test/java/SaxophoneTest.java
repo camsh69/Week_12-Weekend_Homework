@@ -26,4 +26,9 @@ public class SaxophoneTest {
     public void hasKey() {
         assertEquals("Eb", saxophone.getKey());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("blare!", saxophone.play());
+    }
 }

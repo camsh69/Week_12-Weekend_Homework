@@ -2,7 +2,7 @@ package instruments;
 
 import shop.Cost;
 
-public class Saxophone extends Instrument {
+public class Saxophone extends Instrument implements IPlay {
 
     private String saxophoneType;
     private String key;
@@ -19,5 +19,10 @@ public class Saxophone extends Instrument {
 
     public String getKey() {
         return key;
+    }
+
+    @Override
+    public String play() {
+        return "blare!";
     }
 }
