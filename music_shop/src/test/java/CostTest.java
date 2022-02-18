@@ -15,23 +15,23 @@ public class CostTest {
 
     @Test
     public void canGetBuyingPrice() {
-        assertEquals(120.00, cost.getBuyingPrice());
+        assertEquals(120.00, cost.getBuyingPrice(), 0.0);
     }
 
     @Test
     public void canGetSellingPrice() {
-        assertEquals(150.00, cost.getSellingPrice());
+        assertEquals(150.00, cost.getSellingPrice(), 0.0);
     }
 
     @Test
     public void canSetBuyingPrice() {
         cost.setBuyingPrice(120.00);
-        assertEquals(120.00, cost.getBuyingPrice());
+        assertEquals(120.00, cost.getBuyingPrice(), 0.0);
     }
 
     @Test
     public void canSetSellingPrice() {
-        cost,setSelllingPrice(160.00);
-        assertEquals(160.00. cost.getSellingPrice());
+        cost.setSellingPrice(160.00);
+        assertEquals(160.00, cost.getSellingPrice(), 0.0);
     }
 }
