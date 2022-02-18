@@ -1,8 +1,11 @@
 package instruments;
 
 import shop.Cost;
+import shop.ISell;
 
-public class Saxophone extends Instrument implements IPlay {
+import java.nio.channels.IllegalSelectorException;
+
+public class Saxophone extends Instrument implements IPlay, ISell {
 
     private String saxophoneType;
     private String key;
@@ -24,5 +27,10 @@ public class Saxophone extends Instrument implements IPlay {
     @Override
     public String play() {
         return "blare!";
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return super.getPricing().calculateMarkUp();
     }
 }
