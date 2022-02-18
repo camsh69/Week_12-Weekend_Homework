@@ -42,5 +42,10 @@ public class SheetMusicTest {
         sheetMusic.getPricing().setSellingPrice(12.00);
         assertEquals(12.00, sheetMusic.getPricing().getSellingPrice(), 0.0);
     }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(1.00, sheetMusic.calculateMarkUp(), 0.0);
+    }
 }
 

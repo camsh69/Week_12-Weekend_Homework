@@ -23,6 +23,6 @@ public class DrumSticks implements ISell {
 
     @Override
     public double calculateMarkUp() {
-        return this.getPricing().getSellingPrice() - this.getPricing().getBuyingPrice();
+        return this.pricing.calculateMarkUp();
     }
 }

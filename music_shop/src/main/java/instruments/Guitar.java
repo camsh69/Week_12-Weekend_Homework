@@ -1,8 +1,9 @@
 package instruments;
 
 import shop.Cost;
+import shop.ISell;
 
-public class Guitar extends Instrument implements IPlay {
+public class Guitar extends Instrument implements IPlay, ISell {
 
     private int noOfStrings;
     private String pickupType;
@@ -24,5 +25,10 @@ public class Guitar extends Instrument implements IPlay {
     @Override
     public String play() {
         return "Twang!";
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return super.getPricing().calculateMarkUp();
     }
 }

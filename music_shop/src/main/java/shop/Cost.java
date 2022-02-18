@@ -25,4 +25,8 @@ public class Cost {
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
+
+    public double calculateMarkUp() {
+        return this.sellingPrice - this.buyingPrice;
+    }
 }

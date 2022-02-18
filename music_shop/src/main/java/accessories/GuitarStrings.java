@@ -1,8 +1,9 @@
 package accessories;
 
 import shop.Cost;
+import shop.ISell;
 
-public class GuitarStrings {
+public class GuitarStrings implements ISell {
 
     private int gauge;
     private Cost pricing;
@@ -18,5 +19,10 @@ public class GuitarStrings {
 
     public Cost getPricing() {
         return pricing;
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return this.pricing.calculateMarkUp();
     }
 }

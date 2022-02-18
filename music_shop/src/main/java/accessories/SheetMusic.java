@@ -1,8 +1,9 @@
 package accessories;
 
 import shop.Cost;
+import shop.ISell;
 
-public class SheetMusic {
+public class SheetMusic implements ISell {
 
     private String composition;
     private Cost pricing;
@@ -18,5 +19,10 @@ public class SheetMusic {
 
     public Cost getPricing() {
         return pricing;
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return this.pricing.calculateMarkUp();
     }
 }
