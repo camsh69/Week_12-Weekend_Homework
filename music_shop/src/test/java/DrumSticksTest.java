@@ -31,4 +31,15 @@ public class DrumSticksTest {
         drumSticks.getPricing().setBuyingPrice(9.00);
         assertEquals(9.00, drumSticks.getPricing().getBuyingPrice(), 0.0);
     }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(15.00, drumSticks.getPricing().getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canSetSellingPrice() {
+        drumSticks.getPricing().setSellingPrice(12.00);
+        assertEquals(12.00, drumSticks.getPricing().getSellingPrice(), 0.0);
+    }
 }
