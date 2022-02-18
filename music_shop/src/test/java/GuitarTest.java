@@ -36,4 +36,14 @@ public class GuitarTest {
     public void hasManufacturer() {
         assertEquals("Fender", guitar.getManufacturer());
     }
+
+    @Test
+    public void hasModel() {
+        assertEquals("Telecaster", guitar.getModel());
+    }
+
+    @Test
+    public void hasBuyingPrice() {
+        assertEquals(250.00, guitar.getPricing().getBuyingPrice(), 0.0);
+    }
 }
